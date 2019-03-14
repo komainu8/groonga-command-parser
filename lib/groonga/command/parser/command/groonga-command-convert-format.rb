@@ -77,6 +77,12 @@ module Groonga
                              "Available only in command format",
                              "[#{@pretty_print}]") do |boolean|
               @pretty_print = boolean
+
+            option_parser.on("--elasticsearch-version=VERSION",
+                             "Specify the Elasticsearch version",
+                             "Available only in elasticsearch format",
+                             "[#{@elasticsearch_version}]") do |version|
+              @elasticsearch_version = version
             end
 
             option_parser.on("--elasticsearch-version=VERSION",
